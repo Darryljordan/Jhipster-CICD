@@ -1,0 +1,27 @@
+{
+  "nutriCareApp": {
+    "mesure": {
+      "home": {
+        "title": "Mesures",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Mesure",
+        "createOrEditLabel": "Créer ou éditer un Mesure",
+        "notFound": "Aucun Mesure trouvé"
+      },
+      "created": "Un nouveau Mesure a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Mesure avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Mesure avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Mesure {{ id }} ?"
+      },
+      "detail": {
+        "title": "Mesure"
+      },
+      "id": "ID",
+      "type": "Type",
+      "date": "Date",
+      "valeur": "Valeur",
+      "patient": "Patient"
+    }
+  }
+}

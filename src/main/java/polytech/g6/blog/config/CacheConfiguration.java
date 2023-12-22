@@ -48,6 +48,22 @@ public class CacheConfiguration {
             createCache(cm, polytech.g6.blog.domain.User.class.getName());
             createCache(cm, polytech.g6.blog.domain.Authority.class.getName());
             createCache(cm, polytech.g6.blog.domain.User.class.getName() + ".authorities");
+            createCache(cm, polytech.g6.blog.domain.Patient.class.getName());
+            createCache(cm, polytech.g6.blog.domain.Patient.class.getName() + ".utilisateurs");
+            createCache(cm, polytech.g6.blog.domain.Mesure.class.getName());
+            createCache(cm, polytech.g6.blog.domain.Rappel.class.getName());
+            createCache(cm, polytech.g6.blog.domain.Etablissement.class.getName());
+            createCache(cm, polytech.g6.blog.domain.Etablissement.class.getName() + ".chambres");
+            createCache(cm, polytech.g6.blog.domain.Etablissement.class.getName() + ".utilisateurs");
+            createCache(cm, polytech.g6.blog.domain.Repas.class.getName());
+            createCache(cm, polytech.g6.blog.domain.Utilisateur.class.getName());
+            createCache(cm, polytech.g6.blog.domain.Utilisateur.class.getName() + ".userRoles");
+            createCache(cm, polytech.g6.blog.domain.Utilisateur.class.getName() + ".patients");
+            createCache(cm, polytech.g6.blog.domain.Utilisateur.class.getName() + ".etablissements");
+            createCache(cm, polytech.g6.blog.domain.UserRole.class.getName());
+            createCache(cm, polytech.g6.blog.domain.UserRole.class.getName() + ".utilisateurs");
+            createCache(cm, polytech.g6.blog.domain.Chambre.class.getName());
+            createCache(cm, polytech.g6.blog.domain.Chambre.class.getName() + ".patients");
             // jhipster-needle-ehcache-add-entry
         };
     }

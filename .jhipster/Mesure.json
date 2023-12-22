@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222142718",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "mesure",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "TypeMesure",
+      "fieldValues": "POIDS,ALBUMINE"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valeur",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Mesure",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "patient",
+      "relationshipName": "patient",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}

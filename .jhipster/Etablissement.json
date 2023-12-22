@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222142720",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "etablissement",
+  "fields": [
+    {
+      "fieldName": "nomE",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength"],
+      "fieldValidateRulesMinlength": "1"
+    },
+    {
+      "fieldName": "adresseE",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Etablissement",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "chambre",
+      "otherEntityRelationshipName": "etablissement",
+      "relationshipName": "chambres",
+      "relationshipType": "one-to-many",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "utilisateur",
+      "otherEntityRelationshipName": "etablissement",
+      "ownerSide": true,
+      "relationshipName": "utilisateur",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

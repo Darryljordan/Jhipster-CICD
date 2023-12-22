@@ -1,0 +1,9 @@
+{
+  "nutriCareApp": {
+    "TypeMesure": {
+      "null": "",
+      "POIDS": "POIDS",
+      "ALBUMINE": "ALBUMINE"
+    }
+  }
+}

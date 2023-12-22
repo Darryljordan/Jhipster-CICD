@@ -1,0 +1,26 @@
+{
+  "nutriCareApp": {
+    "chambre": {
+      "home": {
+        "title": "Chambres",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Chambre",
+        "createOrEditLabel": "Create or edit a Chambre",
+        "notFound": "No Chambres found"
+      },
+      "created": "A new Chambre is created with identifier {{ param }}",
+      "updated": "A Chambre is updated with identifier {{ param }}",
+      "deleted": "A Chambre is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Chambre {{ id }}?"
+      },
+      "detail": {
+        "title": "Chambre"
+      },
+      "id": "ID",
+      "numC": "Num C",
+      "etablissement": "Etablissement",
+      "patient": "Patient"
+    }
+  }
+}

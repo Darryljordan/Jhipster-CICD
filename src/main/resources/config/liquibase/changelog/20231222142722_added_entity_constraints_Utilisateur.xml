@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Utilisateur.
+    -->
+    <changeSet id="20231222142722-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="utilisateur"
+                                 constraintName="fk_utilisateur__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="utilisateur_id"
+                                 baseTableName="rel_utilisateur__user_role"
+                                 constraintName="fk_rel_utilisateur__user_role__utilisateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="utilisateur"/>
+
+        <addForeignKeyConstraint baseColumnNames="user_role_id"
+                                 baseTableName="rel_utilisateur__user_role"
+                                 constraintName="fk_rel_utilisateur__user_role__user_role_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_role"/>
+
+        <addForeignKeyConstraint baseColumnNames="utilisateur_id"
+                                 baseTableName="rel_utilisateur__patient"
+                                 constraintName="fk_rel_utilisateur__patient__utilisateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="utilisateur"/>
+
+        <addForeignKeyConstraint baseColumnNames="patient_id"
+                                 baseTableName="rel_utilisateur__patient"
+                                 constraintName="fk_rel_utilisateur__patient__patient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patient"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,50 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222142722",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "utilisateur",
+  "fields": [
+    {
+      "fieldName": "dateNaissanceU",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Utilisateur",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "userRole",
+      "otherEntityRelationshipName": "utilisateur",
+      "ownerSide": true,
+      "relationshipName": "userRole",
+      "relationshipType": "many-to-many",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "utilisateur",
+      "ownerSide": true,
+      "relationshipName": "patient",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "etablissement",
+      "otherEntityRelationshipName": "utilisateur",
+      "ownerSide": false,
+      "relationshipName": "etablissement",
+      "relationshipType": "many-to-many",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}

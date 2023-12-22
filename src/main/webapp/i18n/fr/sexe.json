@@ -1,0 +1,10 @@
+{
+  "nutriCareApp": {
+    "Sexe": {
+      "null": "",
+      "HOMME": "HOMME",
+      "FEMME": "FEMME",
+      "AUTRE": "AUTRE"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "applications": "*",
+  "changelogDate": "20231222142717",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "patient",
+  "fields": [
+    {
+      "fieldName": "nomP",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength"],
+      "fieldValidateRulesMinlength": "1"
+    },
+    {
+      "fieldName": "prenomP",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength"],
+      "fieldValidateRulesMinlength": "1"
+    },
+    {
+      "fieldName": "dateNaissanceP",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "tailleP",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "sexeP",
+      "fieldType": "Sexe",
+      "fieldValues": "HOMME,FEMME,AUTRE"
+    },
+    {
+      "fieldName": "dateArrivee",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Patient",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "chambre",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "chambres",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "utilisateur",
+      "otherEntityRelationshipName": "patient",
+      "ownerSide": false,
+      "relationshipName": "utilisateur",
+      "relationshipType": "many-to-many",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}

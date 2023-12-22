@@ -7,6 +7,14 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entités",
+        "patient": "Patient",
+        "mesure": "Mesure",
+        "rappel": "Rappel",
+        "etablissement": "Etablissement",
+        "repas": "Repas",
+        "utilisateur": "Utilisateur",
+        "userRole": "User Role",
+        "chambre": "Chambre",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

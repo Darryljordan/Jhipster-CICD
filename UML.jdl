@@ -1,0 +1,87 @@
+DEFAULT_MIN_LENGTH = 1
+
+entity Patient {
+    nomP String minlength(DEFAULT_MIN_LENGTH) 
+    prenomP String minlength(DEFAULT_MIN_LENGTH) 
+    dateNaissanceP LocalDate 
+    tailleP Float
+    sexeP Sexe
+    dateArrivee LocalDate
+}
+
+entity Mesure {
+    type TypeMesure
+    date LocalDate
+    valeur Float   
+}
+
+entity Rappel {
+    dateDebut LocalDate required
+    dateFin LocalDate
+    frequence Long required
+    description String
+}
+
+entity Etablissement {
+    nomE String minlength(DEFAULT_MIN_LENGTH) 
+    adresseE String
+}
+
+entity Repas {
+    dateR LocalDate
+    heureR Instant
+    epa Long
+}
+
+entity Utilisateur {
+    dateNaissanceU LocalDate
+}
+
+entity UserRole {
+    role Role required
+}
+
+
+entity Chambre {
+    numC String required
+}
+
+enum Role {
+    ADMIN,
+    MEDECIN,
+    INFIRMIER
+}
+
+enum TypeMesure {
+	POIDS,
+    ALBUMINE
+}
+
+enum Sexe {
+    HOMME,
+    FEMME,
+    AUTRE
+}
+
+
+relationship ManyToOne {
+    Repas{patient} to Patient
+    Mesure{patient required} to Patient
+    Rappel{patient} to Patient
+    Rappel{utilisateur required} to Utilisateur
+    Patient{chambres required} to Chambre{Patient}
+}
+
+relationship OneToMany {
+    Etablissement{chambres required} to Chambre{Etablissement required}  
+}
+
+relationship OneToOne {
+    Utilisateur{User} to User
+}
+
+relationship ManyToMany {
+    Utilisateur{UserRole required} to UserRole{Utilisateur}
+    Utilisateur{Patient} to Patient{utilisateur required}
+    Etablissement{Utilisateur} to Utilisateur{etablissement required}
+}
