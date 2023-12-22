@@ -1,0 +1,8 @@
+{
+  "generator-jhipster:7.9.4": {
+    "promptValues": {
+      "packageName": "polytech.g6.blog",
+      "nativeLanguage": "fr"
+    }
+  }
+}
